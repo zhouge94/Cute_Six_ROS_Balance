@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="balance" type="balance" name="balance" output="screen" />
+  <node pkg="cutesix_2dnav" type="fix_tf_boradcaster.py" name="fix_tf"/>
+  <node pkg="balance" type="link2blance.py" name="link2balance"/>
+  <node pkg="balance" type="arduino" name="arduino" output="screen"/>
+  <node pkg="balance" type="odom_pub" name="odom_node"/>
+
+</launch>

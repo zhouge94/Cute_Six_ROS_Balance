@@ -1,0 +1,11 @@
+<launch>
+ <master auto="start"/>
+ <group ns="voice">
+  <node pkg="xf_voice" type="xf_tts" name="xftts" />
+  <node pkg="xf_voice" type="xf_asr" name="xfasr"/>
+  <node pkg="xf_voice" type="explain.py" name="explain">
+    <remap from="conntrol_cmd" to="/conntrol_cmd"/>
+  </node>
+  <node pkg="xf_voice" type="wakeup" name="wakeup"/>
+ </group>
+</launch>
